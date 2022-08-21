@@ -19,10 +19,18 @@ import LoginReducer from './ReduxTookitConfigs/Reducers/LoginReducer';
 // import { fetchUsers } from './CRUDUsingToolkitLiveServer/Slice';
 // store.dispatch(fetchUsers())
 // store.dispatch(fetchUsers())
+import Store from './AddToCart/Store';
+import { clothData, elecData, homeData } from './AddToCart/Slice';
+import ElectronicData from './AddToCart/Data/ElectronicData';
+import ClothingData from './AddToCart/Data/ClothingData';
+const data=[...ElectronicData,...ClothingData]
+Store.dispatch(homeData(data))
+Store.dispatch(elecData(ElectronicData))
+Store.dispatch(clothData(ClothingData))
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-    <App />
-    // <Provider store={store}>
-    //     <App/>
-    // </Provider>
+    // <App />
+    <Provider store={Store}>
+        <App/>
+    </Provider>
 );

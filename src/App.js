@@ -1,3 +1,4 @@
+import './App.css'
 // import ContactManager from './StateInFunctional/ContactManager'
 import SimpleState from "./StateInFunctional/SimpleState"
 import UsingStateObj from './StateInFunctional/UsingStateObj'
@@ -34,7 +35,12 @@ import UpdateUsers from "./CRUDUsingToolkitLiveServer/CRUDComps/UpdateUsers"
 import SampleRefComponent from "./UsingRef/SampleRefComponent"
 import ParentForm from "./UsingRef/ParentForm"
 import FormsInput from "./FormElements/FormsInput"
-import Navbar from "./AddToCart/Navbar"
+import Navbar from "./AddToCart/Nav/Navbar"
+import Home from './AddToCart/Components/Home'
+import Electronics from './AddToCart/Components/Electronics'
+import Cloths from './AddToCart/Components/Cloths'
+import Cart from './AddToCart/Components/Cart'
+import SearchedItems from './AddToCart/Components/SearchedItems'
 function App() {
     return(
         <div>
@@ -117,7 +123,16 @@ function App() {
 
             {/* <FormsInput></FormsInput> */}
 
-            <Navbar></Navbar>
+            <BrowserRouter>
+                <Navbar></Navbar>
+                <Routes>
+                    <Route path='/' element={<Home></Home>}></Route>
+                    <Route path='/electronics' element={<Electronics></Electronics>}></Route>
+                    <Route path='/cloths' element={<Cloths></Cloths>}></Route>
+                    <Route path='/cart' element={<Cart></Cart>}></Route>
+                    <Route path='/search' element={<SearchedItems></SearchedItems>}></Route>
+                </Routes>
+            </BrowserRouter>
         </div>
     )
 }

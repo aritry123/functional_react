@@ -1,0 +1,7 @@
+.back{
+    text-decoration: none;
+    color: #0f0c29;
+}
+.back:hover{
+    color: rebeccapurple;
+}

@@ -24,8 +24,8 @@ import ThemeProviderfn from "./ThemeChanger/ThemeProviderfn"
 import CM from "./RouterCM/CM"
 import CounterConnector from "./Redux/ReactReduxSetup/CounterConnector"
 import GetUserConnector from "./ReduxThunk/Component/GetUserConnector"
-import DashBoard from "./ReduxTookitConfigs/ToolkitComponents/DashBoard"
-import LoginComponent from "./ReduxTookitConfigs/ToolkitComponents/LoginComponent"
+// import DashBoard from "./ReduxTookitConfigs/ToolkitComponents/DashBoard"
+// import LoginComponent from "./ReduxTookitConfigs/ToolkitComponents/LoginComponent"
 import ViewUsers from "./CRUDUsingToolkit/CRUDComponents/ViewUsers"
 import AddUser from "./CRUDUsingToolkit/CRUDComponents/AddUser"
 import UpdateUser from "./CRUDUsingToolkit/CRUDComponents/UpdateUser"
@@ -36,11 +36,34 @@ import SampleRefComponent from "./UsingRef/SampleRefComponent"
 import ParentForm from "./UsingRef/ParentForm"
 import FormsInput from "./FormElements/FormsInput"
 import Navbar from "./AddToCart/Nav/Navbar"
-import Home from './AddToCart/Components/Home'
+// import Home from './AddToCart/Components/Home'
 import Electronics from './AddToCart/Components/Electronics'
 import Cloths from './AddToCart/Components/Cloths'
 import Cart from './AddToCart/Components/Cart'
 import SearchedItems from './AddToCart/Components/SearchedItems'
+import FormComponentJoi from './JoiBrowserEg/FormComponent'
+import Display from './FrontEnd/Display'
+import DisplayTwo from './FrontEnd/DisplayTwo'
+import LoginToken from './jwt tokens/LoginToken'
+import DashBoardToken from './jwt tokens/DashBoard'
+// import Login from './CRUDUsingMongoDB/Components/Login'
+import DashBoard from './CRUDUsingMongoDB/Components/Dashboard'
+import LoginCookies from './cookies and jwt/LoginCookies'
+import DashBoardCookies from './cookies and jwt/DashboardCookies'
+import LoginComponent from './cookies and jwt/LoginComponent'
+import DashBoardComponent from './cookies and jwt/DashboardComponent'
+// import Signup from './MiniProject/Components/Signup'
+import Provider from './MiniProject/Provider'
+import Login from './MiniProject/Components/Login'
+import Admin from './MiniProject/Components/Admin'
+import User from './MiniProject/Components/User'
+import Signup from './MiniProject/Components/Signup'
+import ForgotPassword from './MiniProject/Components/ForgotPassword'
+import Home from './MiniProject/Components/Home'
+import Course from './MiniProject/Components/Course'
+import Fav from './MiniProject/Components/Fav'
+// import Login from './RTK_jwt_Tokens/Components/Login'
+// import DashBoard from './RTK_jwt_Tokens/Components/Dashboard'
 function App() {
     return(
         <div>
@@ -123,7 +146,7 @@ function App() {
 
             {/* <FormsInput></FormsInput> */}
 
-            <BrowserRouter>
+            {/* <BrowserRouter>
                 <Navbar></Navbar>
                 <Routes>
                     <Route path='/' element={<Home></Home>}></Route>
@@ -132,7 +155,61 @@ function App() {
                     <Route path='/cart' element={<Cart></Cart>}></Route>
                     <Route path='/search' element={<SearchedItems></SearchedItems>}></Route>
                 </Routes>
-            </BrowserRouter>
+            </BrowserRouter> */}
+
+            {/* <FormComponentJoi></FormComponentJoi> */}
+
+            {/* <Display></Display> */}
+            {/* <DisplayTwo></DisplayTwo> */}
+
+            {/* <BrowserRouter>
+                <Routes>
+                    <Route path='/' element={<LoginToken></LoginToken>}></Route>
+                    <Route path='/dashboard' element={<DashBoardToken></DashBoardToken>}></Route>
+                </Routes>
+            </BrowserRouter> */}
+
+            {/* <BrowserRouter>
+                <Routes>
+                    <Route path='/' element={<Login></Login>}></Route>
+                    <Route path='/dashboard' element={<DashBoard></DashBoard>}></Route>
+                </Routes>
+            </BrowserRouter> */}
+
+            {/* <BrowserRouter>
+                <Routes>
+                    <Route path='/' element={<Login></Login>}></Route>
+                    <Route path='/login' element={<Login></Login>}></Route>
+                    <Route path='/dashboard' element={<DashBoard></DashBoard>}></Route>
+                </Routes>
+            </BrowserRouter> */}
+
+        {/* <BrowserRouter>
+        <Routes>
+            <Route path='/' element={<LoginCookies></LoginCookies>}></Route>
+            <Route path='/dashboard' element={<DashBoardCookies></DashBoardCookies>}></Route>
+        </Routes>
+        </BrowserRouter> */}
+
+        {/* <BrowserRouter>
+        <Routes>
+            <Route path='/' element={<LoginComponent></LoginComponent>}></Route>
+            <Route path='/dashboard' element={<DashBoardComponent></DashBoardComponent>}></Route>
+        </Routes>
+        </BrowserRouter> */}
+
+        <BrowserRouter>
+            <Routes>
+                <Route path='/' element={<Login></Login>}></Route>
+                <Route path='signup' element={<Signup></Signup>}></Route>
+                <Route path='/forgot_password' element={<ForgotPassword></ForgotPassword>}></Route>
+                <Route path='/admin_dashboard' element={<Admin></Admin>}></Route>
+                <Route path='/user_dashboard' element={<User></User>}></Route>
+                <Route path='/user_home' element={<Home></Home>}></Route>
+                <Route path='/user_courses' element={<Course></Course>}></Route>
+                <Route path='/favourite_list' element={<Fav></Fav>}></Route>
+            </Routes>
+        </BrowserRouter>
         </div>
     )
 }

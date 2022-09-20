@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* > * {
+    font-family: "Poppins", cursive;
+    margin: 0;
+}
+
+.loginbody{
+  overflow: hidden;
+  background: #0f0c29;
+  background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);
+  background: linear-gradient(to right, #24243e, #302b63, #0f0c29);
+}
+
+.Signin {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.login{
+  max-width: 978px;
+  width: 70vw;
+  display:flex;
+  border: 1px solid #e9ecef;
+  border-radius: 5px;
+  background-color: white;
+  margin: 100px;
+}
+
+.login span{
+  color: #adb5bd;
+}
+
+#loginform{
+  max-width: 320px;
+  width: 100vw;
+  margin: 2em auto;
+}
+
+#loginform >  input, .loginbtn{
+  border: 1px solid #e9ecef;
+  padding: .9em 1em;
+}
+
+#loginform > input:focus{
+  outline: none;
+  border: 1px solid #0f0c29;
+}
+
+#loginform > .loginbtn{
+  background-color: #003049;
+  color: #e9ecef;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+.loginflex{
+  display: flex;
+  gap: 1em;
+}
+
+.loginflex-col{
+  flex-direction: column;
+}
+
+.login .col-4{
+  margin: auto;
+  padding: 3em 0;
+  width: 400px;
+  height: 100%;
+  margin-left: 266px;
+}
+
+.login .col-3 img{
+  width: 480px;
+  height: 100%;
+  object-fit: cover;
+  align-self: flex-end;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  display: none;
+  /* margin-left: -1px; */
+}
+
+@media screen and (min-width: 860px)  {
+  .login .col-3 img{
+    display: initial;
+  }
+}

@@ -48,7 +48,7 @@ const Navbar=()=>{
                 {/* <Link to='#' className="menu-bars-two"><GoIcons.GoKebabVertical/></Link> */}
                 <div className="search" style={{marginLeft: '300px',width: '500px'}}>
                     <i className="fa fa-search"></i>
-                    <input type="text" className="form-control" placeholder="Search products here" onChange={(e)=>handleChange(e)} onKeyDown={(e)=>handleKey(e)}/>
+                    <input type="text" className="form-control" placeholder="Search products here" onChange={(e)=>handleChange(e)} onKeyDown={(e)=>handleKey(e)} value={inp}/>
                     <button className="btn btn-primary" onClick={(e)=>handleSearch(e)}>Search</button>
                 </div>
                 <button className="menu-bars-two btn btn-outline-danger"><MdIcons.MdLogout style={{marginRight: '10px'}}/>Logout</button>
